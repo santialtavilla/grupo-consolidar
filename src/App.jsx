@@ -8,6 +8,7 @@ import {
   CaretDown,
   ChatsCircle,
   CheckCircle,
+  EnvelopeSimple,
   FileText,
   HouseLine,
   InstagramLogo,
@@ -147,7 +148,7 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <a className="header-login" href={LOGIN_URL}>Iniciar sesión</a>
+          <a className="header-login" href={LOGIN_URL}>ingreso co-propietarios</a>
           <button
             className="menu-button"
             type="button"
@@ -164,7 +165,7 @@ function Header() {
         {navItems.map(([label, href]) => (
           <a href={href} key={href} onClick={() => setOpen(false)}>{label}<ArrowRight size={18} /></a>
         ))}
-        <a className="mobile-login" href={LOGIN_URL}>Iniciar sesión <ArrowRight size={18} /></a>
+        <a className="mobile-login" href={LOGIN_URL}>ingreso co-propietarios <ArrowRight size={18} /></a>
       </nav>
     </header>
   );
@@ -348,7 +349,7 @@ function App() {
         <section className="contact" id="contacto">
           <div className="contact-inner">
             <p className="eyebrow">Empecemos una conversación</p>
-            <h2>¿Hablamos de<br />tu comunidad?</h2>
+            <h2>Hablemos</h2>
             <p>Contanos qué necesita tu consorcio o barrio. Estamos en Mar del Plata y trabajamos con una gestión cercana, clara y profesional.</p>
             <WhatsAppLink className="button button--white">Escribinos por WhatsApp <ArrowRight size={19} /></WhatsAppLink>
             <div className="contact-links">
@@ -370,7 +371,7 @@ function App() {
           <nav aria-label="Navegación de pie">{navItems.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
           <div className="footer-contact">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer"><WhatsappLogo size={20} /> +54 9 223 340-5935</a>
-            <a href="mailto:admgrupoconsolidar@gmail.com">admgrupoconsolidar@gmail.com</a>
+            <a href="mailto:admgrupoconsolidar@gmail.com"><EnvelopeSimple size={20} /> admgrupoconsolidar@gmail.com</a>
             <a href="https://www.instagram.com/grupoconsolidar_/" target="_blank" rel="noreferrer"><InstagramLogo size={20} /> @grupoconsolidar_</a>
           </div>
         </div>

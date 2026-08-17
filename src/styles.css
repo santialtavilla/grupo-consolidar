@@ -38,7 +38,7 @@ button { font: inherit; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 3px; left: 0; height: 1px; background: var(--brand-aqua); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
 .desktop-nav a:hover::after, .desktop-nav a:focus-visible::after { transform: scaleX(1); }
 .header-actions { display: flex; justify-content: flex-end; align-items: center; }
-.header-login { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 21px; color: var(--white); background: var(--ink-deep); font-size: 0.79rem; font-weight: 700; text-decoration: none; transition: background-color 180ms ease, color 180ms ease; }
+.header-login { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 14px; color: var(--white); background: var(--ink-deep); font-size: 0.7rem; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background-color 180ms ease, color 180ms ease; }
 .header-login:hover { color: var(--ink-deep); background: var(--brand-aqua); }
 .menu-button { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; color: var(--ink-deep); background: transparent; border: 0; cursor: pointer; }
 .mobile-nav { display: none; }
@@ -173,7 +173,7 @@ button { font: inherit; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding-top: 25px; color: #6e8385; border-top: 1px solid var(--line); font-size: 0.66rem; }
 .footer-bottom p { margin: 0; }
 .footer-bottom-actions { display: flex; align-items: center; gap: 22px; }
-.back-to-top { width: 38px; height: 38px; display: inline-grid; flex: 0 0 auto; place-items: center; color: var(--ink-deep); border: 1px solid var(--line); text-decoration: none; transition: color 180ms ease, background-color 180ms ease; }
+.back-to-top { width: 38px; height: 38px; display: inline-grid; flex: 0 0 auto; place-items: center; color: var(--ink-deep); border: 1px solid var(--line); text-decoration: none; transform: translateY(-52px); transition: color 180ms ease, background-color 180ms ease; }
 .back-to-top:hover { color: var(--white); background: var(--ink-deep); }
 .whatsapp-bubble { position: fixed; right: 24px; bottom: 24px; z-index: 40; width: 58px; height: 58px; display: grid; place-items: center; color: var(--white); background: #25d366; border-radius: 50%; box-shadow: 0 10px 24px rgba(8, 46, 57, 0.25); text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
 .whatsapp-bubble:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 28px rgba(8, 46, 57, 0.32); }
