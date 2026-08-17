@@ -111,7 +111,7 @@ const faqs = [
 function Logo({ compact = false }) {
   return (
     <a className={`logo ${compact ? "logo--compact" : ""}`} href="#inicio" aria-label="Grupo Consolidar, volver al inicio">
-      <img src="/assets/consolidar-logo.png" alt="Grupo Consolidar" width="545" height="145" />
+      <img src="/assets/consolidar-logo-transparent.png" alt="Grupo Consolidar" width="545" height="145" />
     </a>
   );
 }

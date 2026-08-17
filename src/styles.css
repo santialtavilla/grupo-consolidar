@@ -31,7 +31,7 @@ button { font: inherit; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
 .header-inner { position: relative; z-index: 51; height: var(--header-height); display: grid; grid-template-columns: 220px 1fr 180px; align-items: center; gap: 32px; }
 .logo { display: inline-block; width: 202px; }
-.logo img { width: 100%; height: auto; mix-blend-mode: multiply; }
+.logo img { width: 100%; height: auto; }
 .desktop-nav { display: flex; justify-content: center; align-items: center; gap: clamp(20px, 2.4vw, 38px); }
 .desktop-nav a, .footer nav a { color: #34484d; font-size: 0.78rem; font-weight: 600; line-height: 1; text-decoration: none; }
 .desktop-nav a { position: relative; padding-block: 13px; }
