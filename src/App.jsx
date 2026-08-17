@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
+  ArrowUp,
   Buildings,
   CalendarCheck,
   CaretDown,
@@ -21,12 +22,13 @@ import {
 
 const WHATSAPP_URL =
   "https://wa.me/542233405935?text=Hola%20Grupo%20Consolidar%2C%20quiero%20hacer%20una%20consulta%20sobre%20la%20administraci%C3%B3n%20de%20mi%20comunidad.";
+const LOGIN_URL = "https://copropietarios.i-data.com.ar/login";
 
 const navItems = [
   ["Servicios", "#servicios"],
   ["Cómo trabajamos", "#como-trabajamos"],
-  ["Transparencia", "#transparencia"],
   ["Respaldo", "#respaldo"],
+  ["Preguntas frecuentes", "#preguntas-frecuentes"],
   ["Contacto", "#contacto"],
 ];
 
@@ -145,7 +147,7 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <WhatsAppLink className="header-whatsapp" />
+          <a className="header-login" href={LOGIN_URL}>Iniciar sesión</a>
           <button
             className="menu-button"
             type="button"
@@ -162,7 +164,7 @@ function Header() {
         {navItems.map(([label, href]) => (
           <a href={href} key={href} onClick={() => setOpen(false)}>{label}<ArrowRight size={18} /></a>
         ))}
-        <WhatsAppLink className="button button--primary mobile-whatsapp">Escribinos por WhatsApp</WhatsAppLink>
+        <a className="mobile-login" href={LOGIN_URL}>Iniciar sesión <ArrowRight size={18} /></a>
       </nav>
     </header>
   );
@@ -187,7 +189,7 @@ function App() {
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <div className="hero-inner">
             <p className="eyebrow">Administración en Mar del Plata</p>
-            <h1 id="hero-title">Tu comunidad,<br />bien administrada.</h1>
+            <h1 id="hero-title">Tu edificio<br />bien administrado</h1>
             <p className="hero-copy">Una gestión moderna, transparente y cercana para consorcios y barrios privados.</p>
             <div className="hero-actions">
               <a className="button button--ink" href="#como-trabajamos">
@@ -196,7 +198,7 @@ function App() {
               <WhatsAppLink className="button button--text">Escribinos por WhatsApp</WhatsAppLink>
             </div>
           </div>
-          <p className="hero-note">La gestión que nos une</p>
+          <p className="hero-note">La confianza que buscas, con la flexibilidad que necesitas</p>
         </section>
 
         <figure className="architecture-strip">
@@ -278,26 +280,6 @@ function App() {
           </div>
         </section>
 
-        <section className="transparency" id="transparencia">
-          <div className="transparency-photo" aria-hidden="true">
-            <img src="/assets/comunidad-atlantica.webp" alt="" width="2048" height="804" />
-          </div>
-          <div className="transparency-content">
-            <SectionHeader
-              eyebrow="Transparencia en cada decisión"
-              title="La información, siempre a la vista."
-              text="Cada cierre mensual deja un registro claro y consultable. La documentación queda disponible online para que cada vecino pueda revisarla o auditarla cuando lo necesite."
-              light
-            />
-            <div className="transparency-list">
-              {transparencyItems.map((item) => (
-                <div key={item}><CheckCircle size={20} weight="fill" /><span>{item}</span></div>
-              ))}
-            </div>
-            <p className="transparency-note"><ShieldCheck size={23} /> Cuentas respaldadas por documentación real, sin atajos ni zonas grises.</p>
-          </div>
-        </section>
-
         <section className="support section-shell" id="respaldo">
           <p className="section-index">02 / Experiencia y respaldo</p>
           <div className="support-grid">
@@ -326,7 +308,27 @@ function App() {
           </div>
         </section>
 
-        <section className="faq section-shell" aria-labelledby="faq-title">
+        <section className="transparency" aria-labelledby="transparency-title">
+          <div className="transparency-photo" aria-hidden="true">
+            <img src="/assets/comunidad-atlantica.webp" alt="" width="2048" height="804" />
+          </div>
+          <div className="transparency-content">
+            <SectionHeader
+              eyebrow="Transparencia en cada decisión"
+              title="La información, siempre a la vista."
+              text="Cada cierre mensual deja un registro claro y consultable. La documentación queda disponible online para que cada vecino pueda revisarla o auditarla cuando lo necesite."
+              light
+            />
+            <div className="transparency-list">
+              {transparencyItems.map((item) => (
+                <div key={item}><CheckCircle size={20} weight="fill" /><span>{item}</span></div>
+              ))}
+            </div>
+            <p className="transparency-note"><ShieldCheck size={23} /> Cuentas respaldadas por documentación real, sin atajos ni zonas grises.</p>
+          </div>
+        </section>
+
+        <section className="faq section-shell" id="preguntas-frecuentes" aria-labelledby="faq-title">
           <div className="faq-intro">
             <p className="eyebrow">Preguntas frecuentes</p>
             <h2 id="faq-title">Lo importante,<br />con respuestas claras.</h2>
@@ -358,18 +360,26 @@ function App() {
         </section>
       </main>
 
+      <a className="whatsapp-bubble" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp">
+        <WhatsappLogo size={28} weight="fill" aria-hidden="true" />
+      </a>
+
       <footer className="footer">
         <div className="footer-main">
           <div><Logo compact /><p>Administración moderna, transparente y cercana.</p></div>
           <nav aria-label="Navegación de pie">{navItems.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
           <div className="footer-contact">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer"><WhatsappLogo size={20} /> +54 9 223 340-5935</a>
+            <a href="mailto:admgrupoconsolidar@gmail.com">admgrupoconsolidar@gmail.com</a>
             <a href="https://www.instagram.com/grupoconsolidar_/" target="_blank" rel="noreferrer"><InstagramLogo size={20} /> @grupoconsolidar_</a>
           </div>
         </div>
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Grupo Consolidar · Matrícula Provincial 2440</p>
-          <p>Información institucional sujeta a las condiciones de cada propuesta de administración.</p>
+          <div className="footer-bottom-actions">
+            <p>Información institucional sujeta a las condiciones de cada propuesta de administración.</p>
+            <a className="back-to-top" href="#inicio" aria-label="Volver al inicio"><ArrowUp size={18} /></a>
+          </div>
         </div>
       </footer>
     </>
