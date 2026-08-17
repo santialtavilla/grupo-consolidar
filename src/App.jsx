@@ -148,7 +148,7 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <a className="header-login" href={LOGIN_URL}>Ingreso co-propietarios</a>
+          <a className="header-login" href={LOGIN_URL}>Autogestión</a>
           <button
             className="menu-button"
             type="button"
@@ -165,7 +165,7 @@ function Header() {
         {navItems.map(([label, href]) => (
           <a href={href} key={href} onClick={() => setOpen(false)}>{label}<ArrowRight size={18} /></a>
         ))}
-        <a className="mobile-login" href={LOGIN_URL}>Ingreso co-propietarios <ArrowRight size={18} /></a>
+        <a className="mobile-login" href={LOGIN_URL}>Autogestión <ArrowRight size={18} /></a>
       </nav>
     </header>
   );
