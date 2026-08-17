@@ -163,7 +163,7 @@ button { font: inherit; }
 .contact-links a:hover { background: rgba(255, 255, 255, 0.08); }
 
 .footer { padding: 72px 0 28px; background: var(--white); }
-.footer-main { display: grid; grid-template-columns: 1.2fr 0.6fr 0.8fr; gap: 70px; padding-bottom: 65px; }
+.footer-main { position: relative; display: grid; grid-template-columns: 1.2fr 0.6fr 0.8fr; gap: 70px; padding-bottom: 65px; }
 .logo--compact { width: 180px; }
 .footer-main > div:first-child > p { max-width: 330px; margin: 22px 0 0; color: var(--muted); font-size: 0.82rem; }
 .footer nav, .footer-contact { display: grid; align-content: start; gap: 18px; }
@@ -173,7 +173,8 @@ button { font: inherit; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding-top: 25px; color: #6e8385; border-top: 1px solid var(--line); font-size: 0.66rem; }
 .footer-bottom p { margin: 0; }
 .footer-bottom-actions { display: flex; align-items: center; gap: 22px; }
-.back-to-top { width: 38px; height: 38px; display: inline-grid; flex: 0 0 auto; place-items: center; color: var(--ink-deep); border: 1px solid var(--line); text-decoration: none; transform: translateY(-52px); transition: color 180ms ease, background-color 180ms ease; }
+.back-to-top { width: 38px; height: 38px; display: inline-grid; flex: 0 0 auto; place-items: center; color: var(--ink-deep); border: 1px solid var(--line); text-decoration: none; transition: color 180ms ease, background-color 180ms ease; }
+.footer-top { position: absolute; top: -20px; right: 0; }
 .back-to-top:hover { color: var(--white); background: var(--ink-deep); }
 .whatsapp-bubble { position: fixed; right: 24px; bottom: 24px; z-index: 40; width: 58px; height: 58px; display: grid; place-items: center; color: var(--white); background: #25d366; border-radius: 50%; box-shadow: 0 10px 24px rgba(8, 46, 57, 0.25); text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
 .whatsapp-bubble:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 28px rgba(8, 46, 57, 0.32); }

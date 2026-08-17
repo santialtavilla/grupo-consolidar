@@ -148,7 +148,7 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <a className="header-login" href={LOGIN_URL}>ingreso co-propietarios</a>
+          <a className="header-login" href={LOGIN_URL}>Ingreso co-propietarios</a>
           <button
             className="menu-button"
             type="button"
@@ -165,7 +165,7 @@ function Header() {
         {navItems.map(([label, href]) => (
           <a href={href} key={href} onClick={() => setOpen(false)}>{label}<ArrowRight size={18} /></a>
         ))}
-        <a className="mobile-login" href={LOGIN_URL}>ingreso co-propietarios <ArrowRight size={18} /></a>
+        <a className="mobile-login" href={LOGIN_URL}>Ingreso co-propietarios <ArrowRight size={18} /></a>
       </nav>
     </header>
   );
@@ -374,12 +374,12 @@ function App() {
             <a href="mailto:admgrupoconsolidar@gmail.com"><EnvelopeSimple size={20} /> admgrupoconsolidar@gmail.com</a>
             <a href="https://www.instagram.com/grupoconsolidar_/" target="_blank" rel="noreferrer"><InstagramLogo size={20} /> @grupoconsolidar_</a>
           </div>
+          <a className="back-to-top footer-top" href="#inicio" aria-label="Volver al inicio"><ArrowUp size={18} /></a>
         </div>
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Grupo Consolidar · Matrícula Provincial 2440</p>
           <div className="footer-bottom-actions">
             <p>Información institucional sujeta a las condiciones de cada propuesta de administración.</p>
-            <a className="back-to-top" href="#inicio" aria-label="Volver al inicio"><ArrowUp size={18} /></a>
           </div>
         </div>
       </footer>
