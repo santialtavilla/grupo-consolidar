@@ -60,7 +60,7 @@ button { font: inherit; }
 .button--text { padding-inline: 5px; color: var(--ink-deep); border-bottom-color: var(--brand-aqua); }
 .button--text:hover { color: #007f7b; transform: none; }
 .button--primary { color: var(--ink-deep); background: var(--brand-aqua); }
-.hero-note { position: absolute; right: 108px; bottom: 30px; max-width: min(400px, 45vw); margin: 0; color: #6f9192; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; line-height: 1.5; text-align: right; text-transform: uppercase; }
+.hero-note { max-width: 400px; margin: 30px auto 0; color: #6f9192; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; line-height: 1.5; text-align: center; text-transform: uppercase; }
 
 .architecture-strip { position: relative; height: 248px; margin: 0; overflow: hidden; background: #dce8e6; }
 .architecture-strip::after { content: ""; position: absolute; inset: 0; background: rgba(5, 52, 61, 0.24); }
@@ -199,7 +199,6 @@ button { font: inherit; }
   .mobile-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
   .mobile-nav > a:not(.mobile-whatsapp) { display: flex; align-items: center; justify-content: space-between; padding: 18px 4px; color: var(--ink-deep); border-bottom: 1px solid var(--line); font-size: 1.1rem; font-weight: 600; text-decoration: none; }
   .mobile-whatsapp { margin-top: 30px; }
-  .hero-note { display: none; }
   .hero { min-height: 610px; }
   .hero h1 { font-size: clamp(3.6rem, 10vw, 5.6rem); }
   .value-copy, .working-top, .support-grid, .communities, .faq { grid-template-columns: 1fr; }
@@ -230,6 +229,7 @@ button { font: inherit; }
   .hero-copy { max-width: 330px; font-size: 0.98rem; }
   .hero-actions { flex-direction: column; gap: 9px; margin-top: 30px; }
   .hero-actions .button { width: min(100%, 340px); }
+  .hero-note { max-width: 300px; margin-top: 28px; font-size: 0.6rem; }
   .architecture-strip { height: 218px; }
   .architecture-strip img { object-position: 50% center; }
   .architecture-strip figcaption { right: 20px; bottom: 17px; left: 20px; font-size: 0.61rem; }

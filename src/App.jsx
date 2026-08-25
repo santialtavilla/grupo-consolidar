@@ -75,7 +75,7 @@ const communities = [
   "Altos de Pepa",
   "Arenales I",
   "Lafayette",
-  "Damar VIII",
+  "Damarta MDQ",
   "Dorrego Torres V y VI",
   "Torre Almafuerte",
 ];
