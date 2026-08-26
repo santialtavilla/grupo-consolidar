@@ -380,6 +380,7 @@ function App() {
           <p>© {new Date().getFullYear()} Grupo Consolidar · Matrícula Provincial 2440</p>
           <div className="footer-bottom-actions">
             <p>Información institucional sujeta a las condiciones de cada propuesta de administración.</p>
+            <a className="footer-credit" href="https://crudomkt.com.ar" target="_blank" rel="noreferrer">Diseñado por Crudo Marketing</a>
           </div>
         </div>
       </footer>
